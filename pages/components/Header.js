@@ -35,7 +35,7 @@ export default function Header() {
         </div>
         {/* Center */}
         <div className="flex justify-center flex-grow">
-          <div className="flex space-x-6 md:space-x-2">
+          <div className="flex mx-auto centerspace-x-6 md:space-x-2">
             <HeaderIcon active Icon={HomeIcon} />
             <HeaderIcon Icon={FlagIcon} />
             <HeaderIcon Icon={PlayIcon} />
@@ -44,11 +44,11 @@ export default function Header() {
           </div>
         </div>
         {/* Rigth */}
-        <div className="flex items-center sm:space-x-2 justify-end">
+        <div className="flex items-center cursor-pointer  md:px-10 sm:h-14 md:hover:bg-gray-100 rounded-xl active:border-b-2 active:border-blue-500 group">
           {/* Profile pic */}
+          <p className="">Malek Wahmi</p>
 
-          <p className="whitespace font-semibold pr-3">Malek Wahmi</p>
-          <ViewGridIcon className="icon" />
+          <ViewGridIcon className="icon"/>
           <ChatIcon className="icon" />
           <BellIcon className="icon" />
           <ChevronDownIcon className="icon" />

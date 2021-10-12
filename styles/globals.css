@@ -5,6 +5,6 @@
 
 @layer components {
     .icon {
-      @apply center top
+      @apply flex;
     }
 }
