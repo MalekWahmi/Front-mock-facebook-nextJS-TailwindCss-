@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import {signOut ,useSession} from "next-auth/client"
 import {
   BeakerIcon,
   HomeIcon,
@@ -12,10 +13,11 @@ import {
   BellIcon,
   ChatIcon,
 } from "@heroicons/react/solid";
-import { SearchIcon  } from "@heroicons/react/outline";
+import { SearchIcon } from "@heroicons/react/outline";
 import HeaderIcon from "./HeaderIcon";
 
 export default function Header() {
+  const[session ]=useSession()
   return (
     <div className="sticky top-0 z-50 bgèwhite flex items-center p-2 lg:px-5 shadow-md">
       <div className="flex items-center">
@@ -46,9 +48,18 @@ export default function Header() {
         {/* Rigth */}
         <div className="flex items-center cursor-pointer  md:px-10 sm:h-14 md:hover:bg-gray-100 rounded-xl active:border-b-2 active:border-blue-500 group">
           {/* Profile pic */}
-          <p className="">Malek Wahmi</p>
+          {/* <Image
+            Onclick={signOut}
+            className="rounded-full cursor-pointer"
+            src="https://www.google.com/search?q=malek+wahmi&sxsrf=AOaemvJPuWaoZ7pRDygsytkxWlb6UEx6WQ:1634052705383&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjtjbHYmMXzAhVM-aQKHbt8B-MQ_AUoAXoECAEQAw&biw=1920&bih=1012&dpr=1#imgrc=adoCzptIJ4nW1M&imgdii=Wyym5tjXzlbqSM"
+            width="40"
+            height="40"
+            layout="fixed"
+          /> */}
 
-          <ViewGridIcon className="icon"/>
+          <p className="whitespace-nowrap font-semibold pr-3">Malek Wahmi</p>
+
+          <ViewGridIcon className="icon" />
           <ChatIcon className="icon" />
           <BellIcon className="icon" />
           <ChevronDownIcon className="icon" />

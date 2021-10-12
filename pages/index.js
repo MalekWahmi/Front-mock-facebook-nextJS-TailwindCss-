@@ -2,15 +2,19 @@ import { getSession } from "next-auth/client";
 import Head from "next/head";
 import Header from "./components/Header";
 import Login from "./components/Login";
+import Sidebar from "./components/Sidebar";
 export default function Home({ session }) {
-  if (!session) return <Login />;
+  // if (!session) return <Header />;
   return (
-    <div>
+    <div className="h-screen bg-gray-100 overflow-hidden">
       <Head>
         <title>My Social Media</title>
       </Head>
       <Header />
-      <main></main>
+      <main>
+        {/* Sidebar */}
+        <Sidebar/>
+      </main>
     </div>
   );
 }
