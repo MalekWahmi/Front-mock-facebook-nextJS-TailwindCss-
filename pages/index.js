@@ -3,6 +3,8 @@ import Head from "next/head";
 import Header from "./components/Header";
 import Login from "./components/Login";
 import Sidebar from "./components/Sidebar";
+import Feed from "./components/Feed";
+import StoryCard from "./components/StoryCard";
 export default function Home({ session }) {
   // if (!session) return <Header />;
   return (
@@ -11,9 +13,10 @@ export default function Home({ session }) {
         <title>My Social Media</title>
       </Head>
       <Header />
-      <main>
-        {/* Sidebar */}
+      <main className="flex">
         <Sidebar/>
+        <Feed/>
+        
       </main>
     </div>
   );

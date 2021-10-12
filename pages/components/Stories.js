@@ -1,0 +1,58 @@
+import StoryCard from "../components/StoryCard";
+
+const stories = [
+  {
+    name: "Malek Wahmi",
+    src: ":https//links.papareact.com/k2j",
+    profile: "https://links.papareact.com/k2j"
+  },
+  {
+    name: "Malek Wahmi",
+    src: " https://links.papareact.com/4u4 ",
+    profile:
+    "https://links.papareact.com/zvy"  },
+  // {
+  //   name: "Malek Wahmi",
+  //   src: "https://avatars.githubusercontent.com/u/74403943?v=4",
+  //   profile:
+  //     "data:image/jpeg;base64,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",
+  // },
+  // {
+  //   name: "Malek Wahmi",
+  //   src: "https://avatars.githubusercontent.com/u/74403943?v=4",
+  //   profile:
+  //     "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxATERUQExMWExUVGSAbGBUVGBscHBsgIB0iIiAdHx8kKDQsJCYxJx8fLTstMT01ODA4Iys/QD8uNzQ5OC4BCgoKDg0OEhAQFTcZFRksKysuLSswNzcrNy0rNzQ4LTcuNys3KzcuLysrKystLTArKystNy0rKysrLSsrKysrK//AABEIAGQAZAMBIgACEQEDEQH/xAAcAAACAgMBAQAAAAAAAAAAAAAGBwAFAQIEAwj/xABBEAACAAQCBQkFBQUJAAAAAAABAgADBBEhMQUGEkFRBxMiYXGBkaHRFlJUk7EUMkLB8CMzQ2OyFSRicoKDkqLh/8QAGQEAAgMBAAAAAAAAAAAAAAAAAwQBAgUA/8QAJREAAgIBBAICAwEBAAAAAAAAAAECAxEEEiExEyIycRQzQVEF/9oADAMBAAIRAxEAPwA1bV6i+Fp/lJ6Rr7P0XwtP8pPSLQxi0J8hsIrPZ6i+Fp/lJ6RPZ6i+FkfKT0iyjMRlnFb7PUXwtP8AKT0jHs/RfC0/yk9Iso5NL1wkSJs9spaFu2wwHfFsvogUvKJpqmV3paankS9jB5glJtE3yU2wtx/RD5FaAPuBsN464K+T/REqqmTJ09TNN72OVybm8NrR+iqbZ2eYk290osWdyg9uAsNO5R3ZFbqlrDQhubqKeSVCgXaUhNxv2rXOeN+EM2RoXR7qHSmpmVhcMJUux8ortYdR6CcptKEmYfuvLwx3XGRii5OqmokVE3Rs4EhBtqcwMr26jcRG9S6InU4csMvZ+i+Fp/lJ6Rj2fovhaf5SekWUYirkweCvGr9F8LT/ACk9IkWAiR3JBuYwTFH/AGo/HyET+1X4jwick4LuJFKNLN1RsNLtwHnEcHYLiA7lIrSad6RAC7qpucrbYw77GLsaXPujxgf1kTnXWda2yLEX6z6xWUscoLTGLliQt9Y9H1EkpIF+aCgrbAEkXJ7b3HdFxqZMrJMifVszrKlDeb3PACCKrrNqWJbAMFGFwPIx7NXJOozRmWFExSAEsAu8E3iPMpRw0NrTSjLcmVGguU1nYS6hBYmwmKcuFxw7ItNQqp59fV1GOyo2P+2HkIGKDUPZInPPUy1xKgHaPV1dsHupEqVTU3Nk9MuzO2PSJP5Cw7ovmvPqL2K3b7hXGLxziule8I2+1S/fXxjsC57CJHkKhPeXxESJIFXV65SpVQZTq1lazEY9uEeft1TljhMAvgbD1gG02S1TOb+Y31McQccSO0QXxo7cM4640vvnw9I9E1upDhzo7w3pCvLj3vI+kYuOIjvEicjaTWSlOU5O82jeZpeSykLNRjuAYE+EKaRKZ3VEG0zGwA3kwSaO0WsmoCklnVbkjBQThYcd+OEVnV6tl4S94oJZ0kTGVr7JXENYHyOEd5SdYFTKHEqrXI3ixOEcdBMYG26LIzhbIA9UZ+7+GuuujfmgE2GxvHrLmgCwwAhZaxVU/wC0OxMxQT0ccCBhcRxJpSeMp0wdjH1hyujajMuuc21/Buipjb7TCkGnKofx3749F1lrB/F8VH5iCeNgMjZFREhWprTWW/eD/iPSJHeNnZRV1Bu0xuLMfMxgKAB2RGPRPf8AWO3R1E0+bLkr95yB2cT3DGDoob6E0DUVb7EiUz42JA6K9pyEMWl5HAbFqsW/EBL8QDteflB5oiklUstJEkbKJ0SMMbjBm6yfrHbTzExscSSb9pMFVYN2/wCAVVaG0do2rpQkpQZt5ZmO1yt1I2sd5NhwxMB1bQulVMJBCmxHZYD6gwYa+SJcyolFrsBsqTuF2H1vFjTaLXFJgDDAA4XHhlF7Kd0MFKb0rMgpSKNnajt0dTNNmCWoJJzIGQ4xbz9V3JtLO0v0gr0JoxJEvLpZ3t5mM2GjanmXRrWayOz17BSo1Mp2k1FMLrzhNib2luBdSvDE48RcQh9K0NTTzDKnK6MptZgfEXzHXH0/pMZPcg77C945af7LV09pyCYuItOUXzIv1XtcERoOKZlKTyfL3Ptx8hGftDdXgIausPI8+28yknJzZG0kqZcN/lva3YT/AOwqKiUyMyMCrKSGBzBGBBgbjgvuZ7y6prZDwiRzplEiMInLLOacCP1nB5yUKnOzZjDpbIVL8Cenbry7iYAp/D9ZmGpydaEmGkSZzjLtsSpCg83iADZgbg2zEEqWZFLZNR4CPSFc0tguydrcL3ExOAO8jAgZ+Mb0tVMWQW2OkPw7XjlHjpigcy2kz9k7QOxMClelY2IAuL9hv1QOas6UmgtIdixCYAm5BFxa57IeWGuDPeU8M9dYZp2DMIa5mI7MQQAFtx6/yhiLTMxXC1xnC8rJE6eiUw2n25qKzEWGfDhhDbNlFgcBA7pNYQbTwzlmJVOqi27O8Yq8AMbC+Ubz0JtaKzSM9VNt4F8OPCFlyxuXCOXSoBKHcpvhfPuP6wjSg0kp2kAwRRhwz9IrtJ1YcbCuQwANgBe5FwGByG+KOn0u6dJRfaazzZrBVXqCjOw49mMMxgmhOc2pBzJCFi18TYX7MrefjHznyl6MaRpOoUiwmOZiniHO0D5nwhz0NVUX2lR5obG4Alr3bRufC0KPlUctpOYxJsVQgE32egLjqxv4wG2G0NTPPAHoIkbSxhEgAwXFDLDz0Ui4ZwCPrD00dUVlwTslB+FQAALZXJHlcQnNS6TnK1BwJbwy+oh40spVsNlWc5s2Nv1wwg9XCYC7mSOqZpCXM/ZTEI2hazWIPZYwtNO6SkUtVNCkBiQADmMbnxvDGqaQzMeiGGG0txiMr8cfDjFdNpZdP+15tDMckzJlrtft4RM7XXFuKydXVG2aUmcOqbzJn98diEGQOAH+KDOi0nImYK+0wzUGF5rrpqYaRjKOyVKtfsYbo25PKmY9qmfMXFSEUADM4m/dlCP5e6O6Q/8Ai7Xsj9jPerAGXjC3r9Ms82ZPuCoYhceG8eH1gyqv2iMFfZYggHO3XaAbS+pdU4VJby9hbYMzdLiTh2eEFq1NXeQdmms6SOefptJn8gW/fKbO3EKLY345DujOrWkPtTGyHm0YiUgzwzmM34c8887b4taDU2nWWyVCia7rjMbMWGSe6OyMaH0dIokMqSXdtvaIwLHOy7sN9+owzVf5OUuBS7T+LCcssI5LFFCnmweBc/Uj8oVXLZQgtJqlUKcZczjfNTfeLBrHqhpUtYjsJcyW0tjjiR9QbjvtAJy4ygtNJIGcyxPYDb6nxMTZ0ylfaE8sSMq2cSFRoNeTJv7/AP6G/qWHBMy2t8SJB6ugF3ZXDSMy9rx76PqGLXO/DsucfpEiQdfFgH8kLblHdgzkEqGAJUHC/GNOTysdpTyibrLPR443JiRIxdQvSX2b+n+cPoMJdZMT7rGLah0pNOZiRIQQ7I9q6qfoG+RP9DRX6ri05yNyr55/WJEjd0H6ZfZgf9D90fovHnsZux+FrqR/thr9sL7l0ntzVIt8DtMe0BfUxIkHn0Ar7FGhiRIkLjB//9k=",
+  // },
+];
+import Image from "next/image";
+
+export default function Stories() {
+  
+  return (
+    <div className="flex justify-center space-x-3 mx-auto">
+    <div className="relative h-14 w-14 md:h-20 md:w-20 lg:w-32 cursor-pointer overflow-x p-3 transition duration-200 transform ease-in hover:scale-105">
+      <Image
+        className="absolute opacity-0 lg:opacity-100 rounded-full lg:rounded-3xl"
+        src="https//links.papareact.com/k2j/"
+        layout="fill"
+      />
+      <Image
+        className="object-cover filter brightness-75 rounded-full lg:rounded-3xl"
+        src="https://links.papareact.com/zvy/"
+        layout="fill"
+      />
+      <p className="absolute opacity-0 lg:opacity-100 bottom-4 w-5/6 text-white text-sm font-bold truncate">mmm</p>
+    </div>
+  
+      {/* {stories.map((story) => {
+        <StoryCard
+          key={story.src}
+          name={story.name}
+          src={story.src}
+          profile={story.profile}
+        />;
+      })
+  } */}
+    </div>
+  );
+}
