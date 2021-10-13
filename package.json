@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@firebase/storage": "^0.8.3",
     "@heroicons/react": "^1.0.4",
     "firebase": "^9.1.2",
     "next": "latest",

@@ -5,6 +5,7 @@ import Login from "./components/Login";
 import Sidebar from "./components/Sidebar";
 import Feed from "./components/Feed";
 import StoryCard from "./components/StoryCard";
+import Widgets from "./components/Widgets";
 export default function Home({ session }) {
   // if (!session) return <Header />;
   return (
@@ -16,6 +17,7 @@ export default function Home({ session }) {
       <main className="flex">
         <Sidebar/>
         <Feed/>
+        <Widgets/>
         
       </main>
     </div>
