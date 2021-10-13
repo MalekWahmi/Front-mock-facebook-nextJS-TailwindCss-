@@ -1,5 +1,5 @@
 import Stories from"../components/Stories"
-
+import InputBox from "../components/InputBox"
 
 export default function Feed() {
     return (
@@ -7,6 +7,7 @@ export default function Feed() {
             <h1>hello</h1>
             <div className="mx-auto max-w-md md:max-w-lg lg:max-w-2x1">
             <Stories/>
+            <InputBox/>
 
             </div>
             

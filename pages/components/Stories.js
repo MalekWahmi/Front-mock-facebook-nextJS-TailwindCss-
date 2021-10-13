@@ -31,17 +31,17 @@ export default function Stories() {
   return (
     <div className="flex justify-center space-x-3 mx-auto">
     <div className="relative h-14 w-14 md:h-20 md:w-20 lg:w-32 cursor-pointer overflow-x p-3 transition duration-200 transform ease-in hover:scale-105">
-      <Image
+      {/* <Image
         className="absolute opacity-0 lg:opacity-100 rounded-full lg:rounded-3xl"
         src="https//links.papareact.com/k2j/"
         layout="fill"
-      />
+      /> */}
       <Image
         className="object-cover filter brightness-75 rounded-full lg:rounded-3xl"
         src="https://links.papareact.com/zvy/"
         layout="fill"
       />
-      <p className="absolute opacity-0 lg:opacity-100 bottom-4 w-5/6 text-white text-sm font-bold truncate">mmm</p>
+      <p className="absolute opacity-0 lg:opacity-100 bottom-4 w-5/6 text-white text-sm font-bold truncate">{stories.name}</p>
     </div>
   
       {/* {stories.map((story) => {
