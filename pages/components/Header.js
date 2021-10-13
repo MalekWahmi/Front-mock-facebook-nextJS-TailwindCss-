@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import {signOut ,useSession} from "next-auth/client";
+import { signOut, useSession } from "next-auth/client";
 import {
   BeakerIcon,
   HomeIcon,
@@ -17,7 +17,7 @@ import { SearchIcon } from "@heroicons/react/outline";
 import HeaderIcon from "./HeaderIcon";
 
 export default function Header() {
-  const[session ]=useSession()
+  const [session] = useSession();
   return (
     <div className="sticky top-0 z-50 bgèwhite flex items-center p-2 lg:px-5 shadow-md">
       <div className="flex items-center">
@@ -35,8 +35,9 @@ export default function Header() {
             placeholder="Search Facebook"
           />
         </div>
+        </div>
         {/* Center */}
-        <div className="flex justify-center flex-grow">
+        <div className="flex justify-center md:px-40 flex-grow">
           <div className="flex mx-auto centerspace-x-6 md:space-x-2">
             <HeaderIcon active Icon={HomeIcon} />
             <HeaderIcon Icon={FlagIcon} />
@@ -46,25 +47,29 @@ export default function Header() {
           </div>
         </div>
         {/* Rigth */}
-        <div className="flex items-center cursor-pointer  md:px-10 sm:h-14 md:hover:bg-gray-100 rounded-xl active:border-b-2 active:border-blue-500 group">
+        <div className="flex items-center cursor-pointer sm:space-x-2  md:px-50 sm:h-14 md:hover:bg-gray-100 rounded-xl active:border-b-2 active:border-blue-500 ">
           {/* Profile pic */}
-          {/* <Image
-            Onclick={signOut}
-            className="rounded-full cursor-pointer"
-            src="https://www.google.com/search?q=malek+wahmi&sxsrf=AOaemvJPuWaoZ7pRDygsytkxWlb6UEx6WQ:1634052705383&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjtjbHYmMXzAhVM-aQKHbt8B-MQ_AUoAXoECAEQAw&biw=1920&bih=1012&dpr=1#imgrc=adoCzptIJ4nW1M&imgdii=Wyym5tjXzlbqSM"
-            width="40"
-            height="40"
+           <Image
+            className=" opacity-0 lg:opacity-100 rounded-full lg:rounded-3xl"
+            src="https://links.papareact.com/zvy/"
+            width={40}
+            height={40}
             layout="fixed"
-          /> */}
+          />
 
-          <p className="whitespace-nowrap font-semibold pr-3">Malek Wahmi</p>
+          {/* <div> */}
+          <p className="whitespace-nowrap font-semibold pr-3">Malek Wahmi</p> 
 
-          <ViewGridIcon className="icon" />
-          <ChatIcon className="icon" />
-          <BellIcon className="icon" />
-          <ChevronDownIcon className="icon" />
+  
+          <ViewGridIcon className="hidden xl:inline-flex p-2 h-10 w-10 bg-gray-200 rounded-full text-gray-70 */}
+       {/* cursor-pointer hover:bg-gray-300" /> 
+          <ChatIcon className="hidden xl:inline-flex p-2 h-10 w-10 bg-gray-200 rounded-full text-gray-70 */}
+        cursor-pointer hover:bg-gray-300" />
+          {/* <BellIcon className="text" />
+          <ChevronDownIcon className="" />
+   */}
         </div>
       </div>
-    </div>
+    
   );
 }
